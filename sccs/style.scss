@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'nunito';
-    src: url(../fonts/NunitoSans-Regular.ttf);
+    src: url(../fonts/NunitoSans-SemiBold.ttf);
 }
 
 * {
@@ -18,34 +18,42 @@
     padding: 0;
 }
 
+body {
+    background-color: #1a3e3ea6;
+}
 
-.menu {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+.first-block {
     background-image: url(../img/fon-f-block.png);
     height: 985px;
+    .flex {
+        display: flex;
+    }
+}
+
+.menu {
+    display: flex;
+    padding-top: 16px;
     padding-left: 370px;
     padding-right: 370px;
     font-family: 'nunito';
     font-size: 18px;
-
+    justify-content: space-between;
 }
 
 .menu-block1 {
-    grid-column: span 3;
-    grid-row: 1/2;
-    align-self: center;
+
 }
 
 .menu-block2 {
-    grid-column: 4/12;
-    grid-row: span 1/2;
-    align-self: center;
+
+    display: flex;
+    align-items: center;
     ul {
         display: flex;
+
         li {
-            margin-left: 24px;
+            margin-left: 12px;
+            margin-right: 12px;
             list-style: none;
         }
     }
@@ -53,5 +61,63 @@
     a {
         text-decoration: none;
         color: white;
+    }
+}
+
+.menu-button {
+    align-items: center;
+    display: flex;
+    margin-left: 37px;
+    button {
+        background-color: #1A3E3E;
+        width: 157px;
+        height: 44px;
+        color: white;
+        font-family: 'nunito';
+        font-size: 16px;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+
+.form-program {
+    margin-top: 460px;
+    padding-left: 370px;
+    padding-right: 370px;
+
+    p {
+        margin-top: 25px;
+    }
+
+    .text {
+        font-family: 'art-bold';
+        font-size: 50px;
+        color: white;
+    }
+
+    .form-tur {
+        border-radius: 10px;
+        background: rgba(247, 241, 241, 0.2);
+        backdrop-filter: blur(3px);
+        margin-top: 40px;
+        height: 160px;
+        padding-left: 43px;
+        form{
+
+        }
+        select {
+            height: 52px;
+            width: 270px;
+            padding: 0px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--wl-primary-primary-300, #E1E3E4);
+            background-color: rgb(255, 255, 255, 0);
+            color: white;
+            font-family: 'nunito';
+            font-size: 16px;
+            margin-top: 40px;
+            margin-right: 24px;
+        }
     }
 }
